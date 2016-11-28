@@ -3,9 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>Firebase for stokpal</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <h1>Hello world!</h1>
+        <!-- Log In dialog -->
+
+    <dialog id='loginDialog' class="mdl-dialog">
+       <h4 class="mdl-dialog__title">Sign In</h4>
+
+    <div class="mdl-dialog__content">
+      <input class="mdl-textfield__input" type="text" id="sample3">
+      <label class="mdl-textfield__label" for="sample3">Email.</label>
+    </div>
+
+    <div class="mdl-dialog__content">
+      <input class="mdl-textfield__input" type="text" id="sample3">
+      <label class="mdl-textfield__label" for="sample3">Password</label>
+    </div>
+
+    <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+      <button type="button" class="mdl-button">Agree</button>
+      <button type="button" class="mdl-button close">Disagree</button>
+    </div>
+
+    </dialog>
+
+
+
+    <div class="login-cover">
+    <div class="page-loader mdl-spinner mdl-js-spinner is-active"></div>
+  </div>
+
+
+    <div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">StokPal
+      <span class='page-title-span'>  | </span>
+      <span class='page-title-span'>  Home </span></span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+              Sign out <i class="button-right-icon material-icons">account_circle</i>
+            </button>
+
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+  </div>
+</div>
+
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.cyan-purple.min.css" />
@@ -22,6 +72,7 @@
     messagingSenderId: "619282581057"
   };
   firebase.initializeApp(config);
+ // var ref = new Firebase("https://stokpal-6159d.firebaseio.com/");
 </script>
 
 <script
